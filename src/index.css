@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 220 14% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+    
+    --gradient-from: rgb(59, 130, 246);
+    --gradient-via: rgb(96, 165, 250);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 76% 48%;
+    
+    --gradient-from: rgb(59, 130, 246);
+    --gradient-via: rgb(96, 165, 250);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+  }
+  
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
+
+/* Thesis Demo styles */
+.ba-card {
+  @apply w-16 h-24 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200 dark:border-gray-700 text-2xl font-bold;
+}
+
+.ba-cards {
+  @apply flex flex-wrap justify-center gap-2;
+}
+
+.ba-chart-wrapper {
+  @apply w-full h-64 mt-8 mb-2 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm;
+}
+
+.mixbutton {
+  @apply px-6 py-2 rounded-md bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors dark:bg-blue-600 dark:hover:bg-blue-700;
+}
+
+.ba-schritte {
+  @apply text-lg font-medium dark:text-gray-300;
+}
+
+.ba-infocount {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.toolbar {
+  @apply fixed left-4 top-1/3 transform -translate-y-1/2 flex flex-col gap-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg;
+}
+
+.toolbar-btn-group {
+  @apply flex flex-col gap-2;
+}
+
+.toolbar-btn {
+  @apply px-4 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-sm font-medium;
+}
+
+.toolbar-btn.active {
+  @apply bg-primary text-white hover:bg-primary/90;
+}
+
+.count-btn {
+  @apply w-8 h-8 flex items-center justify-center rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors;
+}
+
+.ba-count-display {
+  @apply text-2xl font-bold mx-2;
+}
+
+.ba-reset-btn {
+  @apply mt-2 w-full justify-center;
+}
