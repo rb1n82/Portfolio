@@ -74,20 +74,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium">Telefon</p>
-                  <a 
-                    href="tel:+4915750622369" 
-                    className="text-primary hover:underline"
-                  >
-                    +49 (157) 50622369
-                  </a>
-                </div>
-              </div>
+              
               
               <div className="flex items-start">
                 <div className="bg-primary/10 p-3 rounded-lg mr-4">
