@@ -89,10 +89,12 @@ const Index = () => {
               
               {/* Download CV Button */}
               <div className="mt-12 text-center">
-                <Button variant="outline" size="lg">
-                  <FileText className="mr-2 h-4 w-4" />
-                  Lebenslauf als PDF herunterladen
-                </Button>
+                <a href="/CV_Robin_Strobel.pdf" download="CV_Robin_Strobel.pdf">
+                  <Button variant="outline" size="lg">
+                    <FileText className="mr-2 h-4 w-4" />
+                    Lebenslauf als PDF herunterladen
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
